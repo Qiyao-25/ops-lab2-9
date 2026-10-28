@@ -1,0 +1,28 @@
+来源：用户提供的任务 0 终端输出节选；保留对应输出数值，非 scripts/run.sh 产物。
+
+Architecture:                x86_64
+CPU(s):                      2
+  On-line CPU(s) list:       0,1
+Vendor ID:                   GenuineIntel
+  BIOS Vendor ID:            QEMU
+  Model name:                General Purpose Processor
+  Thread(s) per core:      2
+  Core(s) per socket:      1
+  Socket(s):               1
+Virtualization features:
+  Hypervisor vendor:         KVM
+  Virtualization type:       full
+CPU NODE SOCKET CORE L1d:L1i:L2:L3 ONLINE
+  0    0      0    0 0:0:0:0          yes
+  1    0      0    0 0:0:0:0          yes
+               total        used        free      shared  buff/cache   available
+Mem:            3531         636         213           2        2973        2894
+Swap:              0           0           0
+6.8.0-136-generic
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+TARGET
+  SOURCE    FSTYPE OPTIONS
+/ /dev/vda1 ext4   rw,relatime
+NAME   MAJ:MIN RM SIZE RO TYPE MOUNTPOINTS
+vda    253:0    0  40G  0 disk
+└─vda1 253:1    0  40G  0 part /
