@@ -1,0 +1,37 @@
+{
+  "started_at_utc": "2026-10-28T17:05:40.411175+00:00",
+  "monitor_start_monotonic": 816202.965115172,
+  "purpose": "Task 0 supplementary observation; original 3 x 2000 baseline is retained",
+  "commands": {
+    "vmstat": [
+      "stdbuf",
+      "-oL",
+      "vmstat",
+      "-w",
+      "-t",
+      "1"
+    ],
+    "iostat": [
+      "stdbuf",
+      "-oL",
+      "iostat",
+      "-dx",
+      "-t",
+      "1",
+      "vda"
+    ],
+    "bench": [
+      "bin/enrolld",
+      "-bench-fsync",
+      "20000"
+    ]
+  },
+  "commit_before_observation": "a8aa98da24b4713106835101aceeb719330240bf",
+  "bench_start_monotonic": 816217.022800863,
+  "bench_start_utc": "2026-10-28T17:05:54.468863+00:00",
+  "bench_end_monotonic": 816242.880304931,
+  "bench_end_utc": "2026-10-28T17:06:20.326369+00:00",
+  "bench_returncode": 0,
+  "bench_elapsed_seconds": 25.8575040679425,
+  "monitor_end_monotonic": 816245.881609395
+}

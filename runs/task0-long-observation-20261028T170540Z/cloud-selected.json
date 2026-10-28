@@ -1,0 +1,8 @@
+{
+  "instance_type": "x1.2u.4g",
+  "region_id": "cn-east-3",
+  "availability_zone": "cn-east-3c",
+  "resourcespeccode": "x1.2u.4g.linux",
+  "cloudServiceType": "hws.service.type.ec2",
+  "note": "Only selected nonsensitive configuration fields were retained; complete metadata was not saved."
+}
