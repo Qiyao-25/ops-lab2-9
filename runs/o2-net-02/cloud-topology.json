@@ -1,0 +1,29 @@
+{
+  "A": {
+    "hostname": "ecs-37fd",
+    "instance_type": "x1.2u.4g",
+    "region_id": "cn-east-3",
+    "availability_zone": "cn-east-3c",
+    "private_addresses": [
+      "192.168.0.178"
+    ],
+    "cpu_count": 2,
+    "ntp_synchronized_at_collection": "yes",
+    "vpc_id_sha256": "f55fd9e339381f1eba82d44bc08e703813185bd20b8753c806d48871a93f9ca8"
+  },
+  "B": {
+    "hostname": "ecs-7508",
+    "instance_type": "x1.2u.4g",
+    "region_id": "cn-east-3",
+    "availability_zone": "cn-east-3c",
+    "private_addresses": [
+      "192.168.0.77"
+    ],
+    "cpu_count": 2,
+    "ntp_synchronized_at_collection": "yes",
+    "vpc_id_sha256": "f55fd9e339381f1eba82d44bc08e703813185bd20b8753c806d48871a93f9ca8"
+  },
+  "same_vpc": true,
+  "verification_time": "2026-10-30T01:07:12.464532+08:00",
+  "note": "Selected metadata checked after the experiment; VPC IDs are represented by hashes. No full metadata response is retained."
+}

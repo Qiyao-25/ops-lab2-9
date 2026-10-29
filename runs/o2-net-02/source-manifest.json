@@ -1,0 +1,79 @@
+[
+  {
+    "host": "A",
+    "file": "enrolld.log",
+    "bytes": 171,
+    "sha256": "b10f6df74851d2bd86b45ceecb0064d52e40f0a6472724309f23bba87f3cc9a2",
+    "source_path": "/root/lab2/runs/o2-net-02/enrolld.log"
+  },
+  {
+    "host": "A",
+    "file": "meta-A.txt",
+    "bytes": 3671,
+    "sha256": "49d77ae487a48aa806ab56255211f3bfc25ba152de3506fa797328ee3a1ed7a6",
+    "source_path": "/root/lab2/runs/o2-net-02/meta-A.txt"
+  },
+  {
+    "host": "A",
+    "file": "mpstat-A.log",
+    "bytes": 358723,
+    "sha256": "76136b80abc2399f59f2e6c994a20593899885d0a69b0e30c980d062a83801d0",
+    "source_path": "/root/lab2/runs/o2-net-02/mpstat-A.log"
+  },
+  {
+    "host": "A",
+    "file": "prediction.md",
+    "bytes": 3578,
+    "sha256": "edfc7e7d7cc444ab5338210c3491786f27502558edb930a454854acf1f6a4776",
+    "source_path": "/root/lab2/runs/o2-net-02/prediction.md"
+  },
+  {
+    "host": "A",
+    "file": "sar-net-A.log",
+    "bytes": 492413,
+    "sha256": "2c46174098b055497ab128d267a0db2368bba9ae82c0201c89e770b7ebd56ae1",
+    "source_path": "/root/lab2/runs/o2-net-02/sar-net-A.log"
+  },
+  {
+    "host": "A",
+    "file": "ss-A.log",
+    "bytes": 17036226,
+    "sha256": "0700f27ab7dbe76d1ef62545deebe9964f9e3e3c9de9b999710095c227c2ad68",
+    "source_path": "/root/lab2/runs/o2-net-02/ss-A.log"
+  },
+  {
+    "host": "B",
+    "file": "loadgen.log",
+    "bytes": 2376,
+    "sha256": "bbbb8d7d6445adb8e481eaaad08563e80ed06192823b20c9f769013c56a09695",
+    "source_path": "/root/lab2/runs/o2-net-02/loadgen.log"
+  },
+  {
+    "host": "B",
+    "file": "meta-B.txt",
+    "bytes": 3655,
+    "sha256": "997cb5eda83ae81955f74fa30d67f2294ed2dc4ad3f476a2af2662f0fde6b62c",
+    "source_path": "/root/lab2/runs/o2-net-02/meta-B.txt"
+  },
+  {
+    "host": "B",
+    "file": "mpstat-B.log",
+    "bytes": 114431,
+    "sha256": "3710bffb7eff00bf36d47ef1118931e3723dc518b3149aeac96cd4f79564bc71",
+    "source_path": "/root/lab2/runs/o2-net-02/mpstat-B.log"
+  },
+  {
+    "host": "B",
+    "file": "sar-net-B.log",
+    "bytes": 90323,
+    "sha256": "f5ce188f967352ea31e7e6bc727b5d829114d025e056104f090d62d6b4baafd4",
+    "source_path": "/root/lab2/runs/o2-net-02/sar-net-B.log"
+  },
+  {
+    "host": "B",
+    "file": "steps.csv",
+    "bytes": 1298,
+    "sha256": "0d00de439a0ea83b8ac2eaf635541e798c165ad4a5756edfe288935826bcce17",
+    "source_path": "/root/lab2/runs/o2-net-02/steps.csv"
+  }
+]

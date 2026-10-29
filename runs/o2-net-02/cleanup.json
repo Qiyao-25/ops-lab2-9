@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-30T01:07:15.183869+08:00",
+  "service_before": {
+    "addr": "0.0.0.0:8080",
+    "work": 200000,
+    "pool": 4,
+    "db_ms": 10,
+    "pool_timeout": "1s",
+    "sync": "each",
+    "sync_interval": "1s",
+    "data": "data",
+    "go_version": "go1.26.9",
+    "gomaxprocs": 2,
+    "gogc": "",
+    "pid": 2945786,
+    "started": "2026-10-30T00:47:27+08:00"
+  },
+  "stopped_original_o2_service": true,
+  "port_8080_listening_after": false,
+  "security_group_rule_removed": false,
+  "security_group_status": "Temporary TCP 8080 ingress rule is retained at the user's explicit request; it has not been revoked.",
+  "user_requested_rule_retention": true,
+  "cleanup_next_step_when_ready": "Revoke the temporary O2 TCP 8080 ingress rule when the user chooses to complete that cleanup step.",
+  "monitor_processes_at_initial_check": {
+    "A_sar": false,
+    "A_mpstat": false,
+    "B_sar": false,
+    "B_mpstat": false,
+    "B_loadgen": false
+  }
+}
