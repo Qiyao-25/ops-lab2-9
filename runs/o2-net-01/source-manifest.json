@@ -1,0 +1,17 @@
+[
+  {
+    "file": "mpstat-A.log",
+    "bytes": 90313,
+    "sha256": "c5ced598ff133cf198983ede26538ba54bce2797b8ce670e4b1af6a490f7b983"
+  },
+  {
+    "file": "sar-net-A.log",
+    "bytes": 123953,
+    "sha256": "eca0a23c5918792ff7ace06148981c773b2fd52aaa79986819935b0bda681944"
+  },
+  {
+    "file": "ss-A.log",
+    "bytes": 71291,
+    "sha256": "fc8482899506bf406865d277c48244d194faf12690c4242640cc6185fdd719f6"
+  }
+]
