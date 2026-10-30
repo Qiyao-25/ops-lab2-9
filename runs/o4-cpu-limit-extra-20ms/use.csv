@@ -1,0 +1,2 @@
+step,target_rps,svc_cpu_busy,all_cpu_busy,cpu_steal,cpu_iowait,procs_running_avg,cpu_psi_some,mem_available_min_mb,swap_in_per_s
+1,650,0.9995,0.57475,0,0.00025,2.8,0.0154766,2215.96,0
