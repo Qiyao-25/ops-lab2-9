@@ -1,0 +1,78 @@
+# HELP http_requests_total Completed business requests by route, method and response status
+# TYPE http_requests_total counter
+http_requests_total{route="/api/analyze",method="POST",code="200"} 112483
+# HELP http_request_duration_seconds Server handler duration, excluding network and pre-handler queueing
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="0.001"} 0
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="0.002"} 85570
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="0.005"} 112468
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="0.01"} 112480
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="0.02"} 112480
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="0.05"} 112481
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="0.1"} 112482
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="0.2"} 112482
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="0.5"} 112482
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="1"} 112482
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="2"} 112482
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="5"} 112482
+http_request_duration_seconds_bucket{route="/api/analyze",method="POST",code="200",le="+Inf"} 112483
+http_request_duration_seconds_sum{route="/api/analyze",method="POST",code="200"} 189.78113644100114
+http_request_duration_seconds_count{route="/api/analyze",method="POST",code="200"} 112483
+# HELP http_inflight_requests Business requests currently executing
+# TYPE http_inflight_requests gauge
+http_inflight_requests{route="/api/analyze"} 0
+# HELP textstats_info Build information
+# TYPE textstats_info gauge
+textstats_info{version="0.3.0",commit="7503da5e1974a466f20ef7008bd20986b6aafdcb",go_version="go1.26.9"} 1
+# HELP textstats_process_metrics_supported Linux process metrics are available
+# TYPE textstats_process_metrics_supported gauge
+textstats_process_metrics_supported 1
+# HELP process_cpu_seconds_total 进程累计用掉的 CPU 时间（user + system，秒）
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 198.149579
+# HELP process_resident_memory_bytes 进程真正占用的物理内存 RSS（字节）
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 2.4485888e+07
+# HELP process_open_fds 打开的文件描述符数（含连接）
+# TYPE process_open_fds gauge
+process_open_fds 1030
+# HELP process_threads 操作系统线程数
+# TYPE process_threads gauge
+process_threads 6
+# HELP process_cpu_wait_seconds_total 进程的线程在运行队列里等 CPU 的累计时间（秒），取自各线程的 /proc/self/task/*/schedstat；它的速率是平均有几个线程在等核，是 CPU 饱和的直接证据
+# TYPE process_cpu_wait_seconds_total counter
+process_cpu_wait_seconds_total 28.443173061000007
+# HELP go_goroutines goroutine 数
+# TYPE go_goroutines gauge
+go_goroutines 1029
+# HELP go_gomaxprocs Go 同时用来执行代码的线程数上限（受 taskset 和 cgroup 的 CPU 限制影响）
+# TYPE go_gomaxprocs gauge
+go_gomaxprocs 1
+# HELP go_gc_cycles_total 完成的 GC 次数
+# TYPE go_gc_cycles_total counter
+go_gc_cycles_total 44782
+# HELP go_sched_latencies_seconds goroutine 可以运行但在等执行线程（等 CPU）的时间；运行时的桶比这里细，换算时整桶归入不小于它上沿的那个桶，_sum 按每个桶的下沿估计
+# TYPE go_sched_latencies_seconds histogram
+go_sched_latencies_seconds_bucket{le="1e-05"} 97519
+go_sched_latencies_seconds_bucket{le="5e-05"} 99910
+go_sched_latencies_seconds_bucket{le="0.0001"} 100332
+go_sched_latencies_seconds_bucket{le="0.0005"} 100989
+go_sched_latencies_seconds_bucket{le="0.001"} 101978
+go_sched_latencies_seconds_bucket{le="0.002"} 123424
+go_sched_latencies_seconds_bucket{le="0.005"} 133734
+go_sched_latencies_seconds_bucket{le="0.01"} 136361
+go_sched_latencies_seconds_bucket{le="0.02"} 138089
+go_sched_latencies_seconds_bucket{le="0.05"} 139398
+go_sched_latencies_seconds_bucket{le="0.1"} 139871
+go_sched_latencies_seconds_bucket{le="0.2"} 140146
+go_sched_latencies_seconds_bucket{le="0.5"} 140842
+go_sched_latencies_seconds_bucket{le="1"} 140952
+go_sched_latencies_seconds_bucket{le="+Inf"} 143032
+go_sched_latencies_seconds_sum 6268.635118975999
+go_sched_latencies_seconds_count 143032
+# HELP go_gc_cpu_seconds_total GC 用掉的 CPU 时间估计（秒）
+# TYPE go_gc_cpu_seconds_total counter
+go_gc_cpu_seconds_total 16.76331933
+# HELP go_heap_objects_bytes 堆上对象占用的字节数（含尚未回收的）
+# TYPE go_heap_objects_bytes gauge
+go_heap_objects_bytes 3.63844e+06

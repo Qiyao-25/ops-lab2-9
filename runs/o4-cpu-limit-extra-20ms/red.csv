@@ -1,0 +1,2 @@
+step,target_rps,server_rps,server_error_rate,server_p99_ms,server_mean_ms,server_slo_good,cpu_cores,cpu_ms_per_req,inflight_avg,cpu_wait_threads,sched_wait_p99_ms
+1,650,434.249,0,4.89703,1.60691,1,0.812448,1.87093,0.1,0.00344888,1000
