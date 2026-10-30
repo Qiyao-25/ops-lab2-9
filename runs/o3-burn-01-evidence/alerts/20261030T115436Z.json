@@ -1,0 +1,1 @@
+{"status":"success","data":{"alerts":[{"labels":{"alertname":"EnrolldReadSLOBurnRateHigh","route":"/api/courses/{id}","service":"enrolld","severity":"warning"},"annotations":{"description":"最近1分钟燃烧率为 97.00213550877787，超过10且持续30秒；SLO为99%的读请求在50ms内成功。","summary":"enrolld 读路径 SLO 燃烧率过高"},"state":"firing","activeAt":"2026-10-30T11:53:41.616316969Z","value":"9.700213550877787e+01"}]}}

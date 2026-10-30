@@ -1,0 +1,40 @@
+groups:
+  - name: enrolld-read-slo
+    interval: 5s
+    rules:
+      - record: enrolld:read_rps:rate1m
+        expr: |
+          sum(rate(http_requests_total{
+            job="enrolld",route="/api/courses/{id}"
+          }[1m]))
+
+      - record: enrolld:read_sli:ratio1m
+        expr: |
+          (
+            sum(rate(http_request_duration_seconds_bucket{
+              job="enrolld",
+              route="/api/courses/{id}",
+              code="200",
+              le="0.05"
+            }[1m]))
+            or vector(0)
+          )
+          / enrolld:read_rps:rate1m
+
+      - record: enrolld:read_burn_rate:ratio1m
+        expr: |
+          clamp_min(1 - enrolld:read_sli:ratio1m, 0) / 0.01
+
+      - alert: EnrolldReadSLOBurnRateHigh
+        expr: |
+          (enrolld:read_burn_rate:ratio1m > 10)
+          and (enrolld:read_rps:rate1m > 0)
+          and (sum(up{job="enrolld"}) == 1)
+        for: 30s
+        labels:
+          severity: warning
+          service: enrolld
+          route: "/api/courses/{id}"
+        annotations:
+          summary: "enrolld 读路径 SLO 燃烧率过高"
+          description: "最近1分钟燃烧率为 {{ $value }}，超过10且持续30秒；SLO为99%的读请求在50ms内成功。"
