@@ -1,0 +1,147 @@
+{
+  "started_at": "2026-11-03T12:21:30.354544+08:00",
+  "directory": "runs/task0-fsync-retest-20261103T122130+0800",
+  "binary_sha256": "a5a81d5d6e1f7d752066e54269e4144d084a099bd243b795178dbd2aa4639ba9",
+  "method": "Two groups of three unpinned runs, N=2000 each; 20 s between groups; 10 s idle before, 5 s after. Existing background services kept running. No cache dropping or reboot.",
+  "environment": [
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stdout": "1ad41dce1f77f6160fb2d00699f756156d03be45\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "returncode": 0,
+      "stdout": "?? logs/\n?? runs/o1-gogc100-check/\n?? runs/o1-gogc400-check/\n?? runs/o2-net/\n?? runs/r1-pool4-check/\n?? runs/r2-pool45-check/\n?? runs/recheck-fsync-20261102-122635-3923864.txt\n?? runs/recheck-w1-each-20261102-120858-3923864/\n?? runs/recheck-w1-each-20261102-121409-3923864/\n?? runs/recheck-w1-each-full-20261103-104140-4188734/\n?? runs/recheck-w1-each-selected-20261102-215304-4042209/\n?? runs/recheck-w1-full-20261102-123650-3923864/\n?? runs/recheck-w2-group-full-20261102-144929-3958832/\n?? runs/recheck-w3-interval-full-20261102-145728-3958832/\n?? runs/t1-demo/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "go",
+        "version",
+        "-m",
+        "bin/enrolld"
+      ],
+      "returncode": 0,
+      "stdout": "bin/enrolld: go1.26.9\n\tpath\tenroll-lab/cmd/enrolld\n\tmod\tenroll-lab\tv0.0.0-20261101132751-1ad41dce1f77+dirty\t\n\tbuild\t-buildmode=exe\n\tbuild\t-compiler=gc\n\tbuild\t-trimpath=true\n\tbuild\tCGO_ENABLED=0\n\tbuild\tGOARCH=amd64\n\tbuild\tGOOS=linux\n\tbuild\tGOAMD64=v1\n\tbuild\tvcs=git\n\tbuild\tvcs.revision=1ad41dce1f77f6160fb2d00699f756156d03be45\n\tbuild\tvcs.time=2026-11-01T13:27:51Z\n\tbuild\tvcs.modified=true\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uname",
+        "-r"
+      ],
+      "returncode": 0,
+      "stdout": "6.8.0-136-generic\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "findmnt",
+        "-T",
+        "data"
+      ],
+      "returncode": 0,
+      "stdout": "TARGET SOURCE    FSTYPE OPTIONS\n/      /dev/vda1 ext4   rw,relatime\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "df",
+        "-h",
+        "data"
+      ],
+      "returncode": 0,
+      "stdout": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/vda1        40G   12G   26G  32% /\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "free",
+        "-m"
+      ],
+      "returncode": 0,
+      "stdout": "               total        used        free      shared  buff/cache   available\nMem:            3531        1757         610         268        1722        1774\nSwap:              0           0           0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uptime"
+      ],
+      "returncode": 0,
+      "stdout": " 12:21:30 up 14 days, 21:59, 10 users,  load average: 0.29, 0.09, 0.02\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "taskset",
+        "-pc",
+        "24073"
+      ],
+      "returncode": 0,
+      "stdout": "pid 24073's current affinity list: 0,1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ps",
+        "-eo",
+        "pid,comm,pcpu,pmem",
+        "--sort=-pcpu"
+      ],
+      "returncode": 0,
+      "stdout": "    PID COMMAND         %CPU %MEM\n  24073 python3         44.4  0.4\n3186132 grafana          0.6  7.0\n   1485 ebpfagent        0.3  0.5\n2874444 node_exporter    0.2  0.4\n3941966 telescope        0.2  0.4\n4186715 MainThread       0.1  5.6\n    856 [ksoftirqd/0]    0.1  1.1\n3227839 prometheus       0.1  1.2\n2646890 prometheus       0.1  1.5\n     17 rcu_preempt      0.1  0.0\n3227840 textstats        0.1  0.3\n4186785 MainThread       0.0  2.2\n4186687 MainThread       0.0  3.5\n4186732 MainThread       0.0  1.8\n 948092 containerd       0.0  0.6\n   1397 uniagentd        0.0  0.1\n   1398 uniagentd        0.0  0.1\n4186774 MainThread       0.0  4.2\n    842 hostwatch        0.0  0.2\n    730 uniagent         0.0  0.4\n 948254 dockerd          0.0  1.1\n4186803 copilot-runtime  0.0  2.8\n4186731 MainThread       0.0  2.6\n4186839 MainThread       0.0  2.0\n   1324 containerserver  0.0  0.1\n4192991 kworker/1:1-eve  0.0  0.0\n  22373 sshd             0.0  0.3\n    357 multipathd       0.0  0.7\n   9989 kworker/u4:1-ev  0.0  0.0\n    235 jbd2/vda1-8      0.0  0.0\n    451 systemd-resolve  0.0  0.3\n    737 irqbalance       0.0  0.1\n  15193 code-16507d91be  0.0  0.2\n  22461 bash             0.0  0.1\n    308 systemd-journal  0.0  3.4\n3192346 gpx_grafana_clo  0.0  0.2\n  12824 kworker/0:0-eve  0.0  0.0\n   1009 uniagentd        0.0  0.1\n     16 ksoftirqd/0      0.0  0.0\n   1248 sshd             0.0  0.2\n3188288 gpx_grafana-pro  0.0  0.6\n3187528 gpx_grafana-lok  0.0  0.2\n      1 systemd          0.0  0.3\n     24 ksoftirqd/1      0.0  0.0\n  17066 kworker/u4:0-ev  0.0  0.0\n3186891 gpx_grafana_ela  0.0  0.2\n     79 kworker/0:1H-kb  0.0  0.0\n  21328 kworker/u4:3-ev  0.0  0.0\n     36 kcompactd0       0.0  0.0\n4188164 sshd             0.0  0.2\n    739 polkitd          0.0  0.2\n    755 udisksd          0.0  0.2\n4188339 sshd             0.0  0.2\n    731 dbus-daemon      0.0  0.1\n4188446 sshd             0.0  0.2\n    809 rsyslogd         0.0  0.1\n     51 kworker/1:1H-kb  0.0  0.0\n4188063 bash             0.0  0.1\n     18 migration/0      0.0  0.0\n     23 migration/1      0.0  0.0\n     52 kswapd0          0.0  0.0\n     38 khugepaged       0.0  0.0\n    793 wpa_supplicant   0.0  0.1\n    754 systemd-logind   0.0  0.2\n4188506 bash             0.0  0.1\n4188303 bash             0.0  0.1\n   1024 chronyd          0.0  0.1\n   1080 cron             0.0  0.0\n    370 systemd-udevd    0.0  0.1\n3186737 gpx_grafana-tem  0.0  0.1\n3186607 gpx_grafana_inf  0.0  0.1\n3186478 gpx_grafana-mss  0.0  0.1\n3186278 gpx_grafana_clo  0.0  0.1\n3191495 gpx_grafana-pyr  0.0  0.1\n3190371 gpx_grafana_pos  0.0  0.1\n3187077 gpx_grafana-ope  0.0  0.1\n3186424 gpx_grafana-zip  0.0  0.1\n3186384 gpx_grafana-jae  0.0  0.1\n3186257 gpx_grafana-mys  0.0  0.1\n    784 NetworkManager   0.0  0.3\n    827 ModemManager     0.0  0.2\n     31 khungtaskd       0.0  0.0\n  13267 upowerd          0.0  0.2\n      2 kthreadd         0.0  0.0\n   3848 systemd          0.0  0.3\n   1003 unattended-upgr  0.0  0.4\n      3 pool_workqueue_  0.0  0.0\n      4 kworker/R-rcu_g  0.0  0.0\n      5 kworker/R-rcu_p  0.0  0.0\n      6 kworker/R-slub_  0.0  0.0\n      7 kworker/R-netns  0.0  0.0\n      9 kworker/0:0H-ev  0.0  0.0\n     12 kworker/R-mm_pe  0.0  0.0\n     13 rcu_tasks_kthre  0.0  0.0\n     14 rcu_tasks_rude_  0.0  0.0\n     15 rcu_tasks_trace  0.0  0.0\n     19 idle_inject/0    0.0  0.0\n     20 cpuhp/0          0.0  0.0\n     21 cpuhp/1          0.0  0.0\n     22 idle_inject/1    0.0  0.0\n     26 kworker/1:0H-ev  0.0  0.0\n     27 kdevtmpfs        0.0  0.0\n     28 kworker/R-inet_  0.0  0.0\n     29 kauditd          0.0  0.0\n     33 oom_reaper       0.0  0.0\n     35 kworker/R-write  0.0  0.0\n     37 ksmd             0.0  0.0\n     39 kworker/R-kinte  0.0  0.0\n     40 kworker/R-kbloc  0.0  0.0\n     41 kworker/R-blkcg  0.0  0.0\n     42 irq/9-acpi       0.0  0.0\n     43 kworker/R-tpm_d  0.0  0.0\n     44 kworker/R-ata_s  0.0  0.0\n     45 kworker/R-md     0.0  0.0\n     46 kworker/R-md_bi  0.0  0.0\n     47 kworker/R-edac-  0.0  0.0\n     48 kworker/R-devfr  0.0  0.0\n     49 watchdogd        0.0  0.0\n     50 kworker/R-quota  0.0  0.0\n     53 ecryptfs-kthrea  0.0  0.0\n     54 kworker/R-kthro  0.0  0.0\n     55 kworker/R-acpi_  0.0  0.0\n     56 scsi_eh_0        0.0  0.0\n     57 kworker/R-scsi_  0.0  0.0\n     58 scsi_eh_1        0.0  0.0\n     59 kworker/R-scsi_  0.0  0.0\n     60 scsi_eh_2        0.0  0.0\n     61 kworker/R-scsi_  0.0  0.0\n     63 scsi_eh_3        0.0  0.0\n     64 kworker/R-scsi_  0.0  0.0\n     65 scsi_eh_4        0.0  0.0\n     67 kworker/R-scsi_  0.0  0.0\n     68 scsi_eh_5        0.0  0.0\n     69 kworker/R-scsi_  0.0  0.0\n     70 scsi_eh_6        0.0  0.0\n     71 kworker/R-scsi_  0.0  0.0\n     72 scsi_eh_7        0.0  0.0\n     73 kworker/R-scsi_  0.0  0.0\n     74 scsi_eh_8        0.0  0.0\n     75 kworker/R-scsi_  0.0  0.0\n     76 scsi_eh_9        0.0  0.0\n     77 kworker/R-scsi_  0.0  0.0\n     80 kworker/R-mld    0.0  0.0\n     81 kworker/R-ipv6_  0.0  0.0\n     88 kworker/R-kstrp  0.0  0.0\n     90 kworker/u5:0     0.0  0.0\n     95 kworker/R-crypt  0.0  0.0\n    106 kworker/R-charg  0.0  0.0\n    195 kworker/R-raid5  0.0  0.0\n    236 kworker/R-ext4-  0.0  0.0\n    332 kworker/R-kmpat  0.0  0.0\n    333 kworker/R-kmpat  0.0  0.0\n    459 psimon           0.0  0.0\n    714 kworker/R-nfit   0.0  0.0\n   1025 chronyd          0.0  0.0\n   1242 agetty           0.0  0.0\n   1251 agetty           0.0  0.0\n   1395 sh               0.0  0.0\n   1396 sh               0.0  0.0\n   1653 kworker/R-tls-s  0.0  0.0\n   3850 (sd-pam)         0.0  0.0\n   3855 psimon           0.0  0.0\n  21498 kworker/0:2-cgr  0.0  0.0\n  22623 kworker/u4:2-ex  0.0  0.0\n  22759 kworker/0:1-eve  0.0  0.0\n  22766 kworker/1:0-cgr  0.0  0.0\n  23644 kworker/0:3      0.0  0.0\n  24014 sshd             0.0  0.2\n  24088 ps               0.0  0.1\n1186457 dbus-daemon      0.0  0.1\n2874442 bash             0.0  0.0\n3186127 psimon           0.0  0.0\n4186683 sh               0.0  0.0\n4186727 sh               0.0  0.0\n4187711 bash             0.0  0.1\n4187815 bash             0.0  0.1\n4188419 bash             0.0  0.1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "65e328a",
+        "HEAD",
+        "--",
+        "cmd/enrolld/commit.go",
+        "cmd/enrolld/main.go"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "prior_retest_copy": {
+    "source": "runs/recheck-fsync-20261102-122635-3923864.txt",
+    "sha256": "964da6f25e6a159d80b7813eb574336f0269faeb8b5fbf6b0ba530bb64bfd708",
+    "date_source": "Source filename; exact start/end not recorded in that file."
+  },
+  "finished_at": "2026-11-03T12:22:25.809259+08:00",
+  "binary_sha256_after": "a5a81d5d6e1f7d752066e54269e4144d084a099bd243b795178dbd2aa4639ba9",
+  "environment_after": [
+    {
+      "command": [
+        "df",
+        "-h",
+        "data"
+      ],
+      "returncode": 0,
+      "stdout": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/vda1        40G   12G   26G  32% /\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uptime"
+      ],
+      "returncode": 0,
+      "stdout": " 12:22:25 up 14 days, 22:00, 10 users,  load average: 0.48, 0.17, 0.05\n",
+      "stderr": ""
+    }
+  ]
+}

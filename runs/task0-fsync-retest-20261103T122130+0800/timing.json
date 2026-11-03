@@ -1,0 +1,92 @@
+[
+  {
+    "event": "idle_start",
+    "time": "2026-11-03T12:21:30.384667+08:00"
+  },
+  {
+    "group": 1,
+    "repeat": 1,
+    "start": "2026-11-03T12:21:40.402135+08:00",
+    "command": [
+      "bin/enrolld",
+      "-bench-fsync",
+      "2000"
+    ],
+    "end": "2026-11-03T12:21:43.792893+08:00",
+    "returncode": 0,
+    "file": "group1-run1.txt"
+  },
+  {
+    "group": 1,
+    "repeat": 2,
+    "start": "2026-11-03T12:21:43.812088+08:00",
+    "command": [
+      "bin/enrolld",
+      "-bench-fsync",
+      "2000"
+    ],
+    "end": "2026-11-03T12:21:47.239589+08:00",
+    "returncode": 0,
+    "file": "group1-run2.txt"
+  },
+  {
+    "group": 1,
+    "repeat": 3,
+    "start": "2026-11-03T12:21:47.257813+08:00",
+    "command": [
+      "bin/enrolld",
+      "-bench-fsync",
+      "2000"
+    ],
+    "end": "2026-11-03T12:21:50.721638+08:00",
+    "returncode": 0,
+    "file": "group1-run3.txt"
+  },
+  {
+    "event": "between_groups_idle_start",
+    "time": "2026-11-03T12:21:50.722050+08:00"
+  },
+  {
+    "group": 2,
+    "repeat": 1,
+    "start": "2026-11-03T12:22:10.738593+08:00",
+    "command": [
+      "bin/enrolld",
+      "-bench-fsync",
+      "2000"
+    ],
+    "end": "2026-11-03T12:22:14.077753+08:00",
+    "returncode": 0,
+    "file": "group2-run1.txt"
+  },
+  {
+    "group": 2,
+    "repeat": 2,
+    "start": "2026-11-03T12:22:14.095840+08:00",
+    "command": [
+      "bin/enrolld",
+      "-bench-fsync",
+      "2000"
+    ],
+    "end": "2026-11-03T12:22:17.434608+08:00",
+    "returncode": 0,
+    "file": "group2-run2.txt"
+  },
+  {
+    "group": 2,
+    "repeat": 3,
+    "start": "2026-11-03T12:22:17.451974+08:00",
+    "command": [
+      "bin/enrolld",
+      "-bench-fsync",
+      "2000"
+    ],
+    "end": "2026-11-03T12:22:20.805261+08:00",
+    "returncode": 0,
+    "file": "group2-run3.txt"
+  },
+  {
+    "event": "tail_idle_start",
+    "time": "2026-11-03T12:22:20.805750+08:00"
+  }
+]

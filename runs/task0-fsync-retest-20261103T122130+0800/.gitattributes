@@ -1,0 +1,7 @@
+# Keep original collected files byte-for-byte on every checkout.
+*.log -text whitespace=-blank-at-eof
+group*.txt -text
+*.stderr -text
+prior-retest-20261102.txt -text
+environment.json -text
+timing.json -text

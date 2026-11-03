@@ -1,0 +1,219 @@
+{
+  "note": "Means are calculated from rounded per-run mean outputs, N=2000 each. Percentiles are per run and are not pooled or averaged.",
+  "original_mean_ms": 1.2796666666666667,
+  "new_six_run_mean_ms": 1.6788333333333334,
+  "new_serial_fsync_per_s": 595.6517422813462,
+  "mean_increase_percent": 31.193019015368595,
+  "serial_limit_decrease_percent": 23.776432046063732,
+  "groups": {
+    "1": {
+      "mean_ms": 1.699
+    },
+    "2": {
+      "mean_ms": 1.6586666666666667
+    }
+  },
+  "pidstat_note": "Collector PID 24073 excluded: /proc/PID/io includes waited-for children. Other process activity is not proof of unrelated I/O contention; jbd2 may serve the benchmark itself.",
+  "resources": {
+    "idle": {
+      "vmstat_samples": 9,
+      "iostat_samples": 9,
+      "vmstat": {
+        "r": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.1111111111111111
+        },
+        "b": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "us_plus_sy": {
+          "min": 2.0,
+          "max": 3.0,
+          "mean": 2.3333333333333335
+        },
+        "id": {
+          "min": 97.0,
+          "max": 98.0,
+          "mean": 97.77777777777777
+        },
+        "wa": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.1111111111111111
+        },
+        "st": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "si": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "so": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        }
+      },
+      "iostat": {
+        "w/s": {
+          "min": 0.0,
+          "max": 70.0,
+          "mean": 14.0
+        },
+        "wkB/s": {
+          "min": 0.0,
+          "max": 320.0,
+          "mean": 99.55555555555556
+        },
+        "w_await": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.6255555555555555
+        },
+        "f/s": {
+          "min": 0.0,
+          "max": 6.0,
+          "mean": 0.8888888888888888
+        },
+        "f_await": {
+          "min": 0.0,
+          "max": 0.17,
+          "mean": 0.01888888888888889
+        },
+        "aqu-sz": {
+          "min": 0.0,
+          "max": 0.05,
+          "mean": 0.008888888888888889
+        },
+        "%util": {
+          "min": 0.0,
+          "max": 0.6,
+          "mean": 0.16666666666666666
+        }
+      }
+    },
+    "active": {
+      "vmstat_samples": 14,
+      "iostat_samples": 14,
+      "vmstat": {
+        "r": {
+          "min": 0.0,
+          "max": 5.0,
+          "mean": 1.0
+        },
+        "b": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.9285714285714286
+        },
+        "us_plus_sy": {
+          "min": 4.0,
+          "max": 11.0,
+          "mean": 6.285714285714286
+        },
+        "id": {
+          "min": 46.0,
+          "max": 49.0,
+          "mean": 47.857142857142854
+        },
+        "wa": {
+          "min": 44.0,
+          "max": 47.0,
+          "mean": 46.0
+        },
+        "st": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "si": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "so": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        }
+      },
+      "iostat": {
+        "w/s": {
+          "min": 1708.0,
+          "max": 1874.0,
+          "mean": 1774.142857142857
+        },
+        "wkB/s": {
+          "min": 9344.0,
+          "max": 10284.0,
+          "mean": 9728.57142857143
+        },
+        "w_await": {
+          "min": 0.51,
+          "max": 0.56,
+          "mean": 0.5385714285714286
+        },
+        "f/s": {
+          "min": 1136.0,
+          "max": 1249.0,
+          "mean": 1181.0
+        },
+        "f_await": {
+          "min": 0.07,
+          "max": 0.12,
+          "mean": 0.09071428571428572
+        },
+        "aqu-sz": {
+          "min": 1.03,
+          "max": 1.09,
+          "mean": 1.0657142857142858
+        },
+        "%util": {
+          "min": 93.6,
+          "max": 97.0,
+          "mean": 95.25
+        }
+      }
+    }
+  },
+  "background_write_activity_during_selected_active_samples": {
+    "jbd2/vda1-8": {
+      "max_kB_wr_per_s": 36.0,
+      "nonzero_samples": 7
+    },
+    "pidstat": {
+      "max_kB_wr_per_s": 16.0,
+      "nonzero_samples": 14
+    },
+    "[ksoftirqd/0]": {
+      "max_kB_wr_per_s": 8.0,
+      "nonzero_samples": 4
+    },
+    "uniagentd": {
+      "max_kB_wr_per_s": 12.0,
+      "nonzero_samples": 1
+    },
+    "ebpfagent": {
+      "max_kB_wr_per_s": 32.0,
+      "nonzero_samples": 6
+    },
+    "systemd-journal": {
+      "max_kB_wr_per_s": 336.0,
+      "nonzero_samples": 2
+    },
+    "rsyslogd": {
+      "max_kB_wr_per_s": 8.0,
+      "nonzero_samples": 2
+    },
+    "iostat": {
+      "max_kB_wr_per_s": 4.0,
+      "nonzero_samples": 1
+    }
+  }
+}
